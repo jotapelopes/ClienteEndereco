@@ -1,0 +1,6 @@
+@ClienteEndereco_HostAddress = http://localhost:5003
+
+GET {{ClienteEndereco_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
