@@ -5,16 +5,10 @@ namespace ClienteEnderecoApp
 {
     public class DataContext : DbContext
     {
-        public DataContext() : base()
-        { }
-
-        public DataContext(DbContextOptions options) : base(options)
-        { }
-
+      
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer
-                ("Password=root;Persist Security Info=True;User ID=root;Initial Catalog=ClienteEnderecoDB;Data Source=server");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EcommerceDB;ConnectRetryCount=0");
         }
 
         public DbSet<Cliente> Clientes { get; set; }
